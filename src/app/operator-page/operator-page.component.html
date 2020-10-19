@@ -1,0 +1,15 @@
+<div *ngIf="operator">
+    Found <b>Operator {{operator.name}}</b>
+    <br />
+    <b>Class:</b> {{operator.class | titlecase }}
+    <br />
+    <b>Gender:</b> {{operator.gender | titlecase }}
+</div>
+<div *ngIf="subChapters">
+    <div *ngFor="let chapter of subChapters">
+        <h1><b>{{chapter.number}}: </b>{{chapter.name | titlecase}}</h1>
+        <div *ngFor="let l of chapter.lines">
+            <b>{{l.speaker | titlecase}}:</b> {{l.text}}
+        </div>
+    </div>
+</div>
